@@ -1,3 +1,4 @@
+package com.tns.corejava;
 
 public class Static_Block {
 

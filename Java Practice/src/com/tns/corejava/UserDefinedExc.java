@@ -1,3 +1,4 @@
+package com.tns.corejava;
 import java.util.Scanner;
 
 public class UserDefinedExc {

@@ -1,3 +1,4 @@
+package com.tns.corejava;
 
 interface A
 {

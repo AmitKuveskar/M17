@@ -1,3 +1,4 @@
+package com.tns.corejava;
 
 public class Outer {
 	static int x=10;
