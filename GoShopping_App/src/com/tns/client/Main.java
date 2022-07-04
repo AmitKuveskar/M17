@@ -28,10 +28,8 @@ public class Main
 			//customer type logic
 			//customer type getting from user
 		
-				
-				
-					System.out.print("Enter User Type(isPrime= p or isNormal= n):\t");
-					String answer = in.next().toLowerCase();
+				System.out.print("Enter User Type(Prime= p or Normal= n):\t");
+					String answer = in.next().toLowerCase(); // converts a string to lower case letters
 					
 					if (answer.equals("p")) 
 					{
@@ -52,7 +50,7 @@ public class Main
 				
 			
 	
-			//System.out.println("Out side of while() Loop");
+			
 				
 				//step 1
 				ShopFactory gsf = new GSShopFactory();
@@ -63,7 +61,7 @@ public class Main
 					//System.out.println("In GSPrimeAcc");
 
 					//step 1
-					gsf.getNewPrimeAcc(AccNo, AccNm, 1000, isPrime);
+					gsf.getNewPrimeAcc(AccNo, AccNm, 1000,deliveryCharges);
 
 					
 					
@@ -79,8 +77,7 @@ public class Main
 					gsp.bookProduct(item);
 			
 					System.out.println("Charges\t\t: "+gsp.getCharges());
-					System.out.println("isPrime\t\t: "+gsp.isPrime());
-					System.out.println("Delivery Charges: "+gsp.getDeliverycharges());
+					System.out.println("Delivery Charges: "+gsp.getDeliveryCharges());
 				
 					//step 5
 					//Calling toString()

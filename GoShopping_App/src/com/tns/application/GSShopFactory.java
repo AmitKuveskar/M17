@@ -5,7 +5,7 @@ import com.tns.framework.*;
 //To access Interface method
 public class GSShopFactory implements ShopFactory {
 	
-	public GSPrimeAcc getNewPrimeAcc(int accNo, String accNm, float charges, boolean isPrime) {
+	public GSPrimeAcc getNewPrimeAcc(int accNo, String accNm, float charges, float deliveryCharges) {
 		GSPrimeAcc gsp = new GSPrimeAcc(); //created object for Prime
 		return gsp;
 	}

@@ -6,45 +6,37 @@ import com.tns.application.*;
 public class PrimeAcc extends ShopAcc
 {
 
-	private static final float deliveryCharges = 00;
-	protected static boolean isPrime;
+	protected static float deliveryCharges = 00;
 	
 	
-	public PrimeAcc(int accNo, String accNm, float charges, boolean isPrime) 
+	
+	public PrimeAcc(int accNo, String accNm, float charges, float deliverycharges) 
 	{
 		super(accNo, accNm, charges);
 		
-		this.setPrime(isPrime);
+		this.deliveryCharges = deliveryCharges;
 	}
-
-	public boolean isPrime() 
+	public float getDeliveryCharges() 
 	{
-		return isPrime;
-	}
-
-	public void setPrime(boolean isPrime) 
-	{
-		this.isPrime = isPrime;
+		return deliveryCharges;
+	
 	}
 	
-	public static float getDeliverycharges() {
-		return deliveryCharges;
-	}
-
-
-
 	@Override
 	public void bookProduct(float c) 
 	{
 		super.bookProduct(c);
 	}
-
-
+	
 	@Override
 	public String toString() {
-		return "PrimeAcc [isPrime=" + isPrime + ", isPrime()=" + isPrime() + ", getAccNo()=" + getAccNo()
-				+ ", getAccNm()=" + getAccNm() + ", getCharges()=" + getCharges() + ", toString()=" + super.toString()
+		return "PrimeAcc [getDeliveryCharges()=" + getDeliveryCharges() + ", getAccNo()=" + getAccNo()
+				+ ", getCharges()=" + getCharges() + ", getAccNm()=" + getAccNm() + ", toString()=" + super.toString()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
+
+
+
+	
 	
 }

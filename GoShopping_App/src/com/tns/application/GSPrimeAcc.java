@@ -6,12 +6,12 @@ import com.tns.application.*;
 public class GSPrimeAcc extends PrimeAcc
 {
 	
-	public GSPrimeAcc(int accNo, String accNm, float charges, boolean isPrime) {
-		super(accNo, accNm, charges, isPrime);
+	public GSPrimeAcc(int accNo, String accNm, float charges, float deliveryCharges) {
+		super(accNo, accNm, charges,deliveryCharges);
 	}
 	
 	public GSPrimeAcc() {
-		super(accNo, accNm, charges, isPrime);
+		super(accNo, accNm, charges,deliveryCharges);
 	}
 
 	
@@ -24,11 +24,10 @@ public class GSPrimeAcc extends PrimeAcc
 
 	@Override
 	public String toString() {
-		return "GSPrimeAcc [charges=" + charges + ", isPrime()=" + isPrime() + ", toString()=" + super.toString()
-				+ ", getAccNo()=" + getAccNo() + ", getAccNm()=" + getAccNm() + ", getCharges()=" + getCharges()
+		return "GSPrimeAcc [getDeliveryCharges()=" + getDeliveryCharges() + ", toString()=" + super.toString()
+				+ ", getAccNo()=" + getAccNo() + ", getCharges()=" + getCharges() + ", getAccNm()=" + getAccNm()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-
-		
+	
 	
 }
