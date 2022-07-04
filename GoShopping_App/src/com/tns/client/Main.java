@@ -1,17 +1,19 @@
 package com.tns.client;
 
 import java.util.Scanner;
-import com.tns.framework.*;
-import com.tns.application.*;
 
+import com.tns.application.GSNormalAcc;
+import com.tns.application.GSPrimeAcc;
+import com.tns.application.GSShopFactory;
+import com.tns.framework.ShopFactory;
 
-public class Main {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+public class Main 
+{
+	public static void main(String[] args) 
+	{
 		final float deliveryCharges= 50;
 		float item;
-		boolean isPrime = false, flage = false;
+		boolean isPrime = false;
 		
 		System.out.print("Enter Acc No:\t");
 		Scanner in = new Scanner(System.in);
@@ -19,39 +21,37 @@ public class Main {
 		System.out.print("Enter Acc Name:\t");
 		String AccNm = in.next();
 		
-		loop1:while(true)
-		{
+
 			System.out.print("Enter no of items you want:\t");
 			item= in.nextInt();
 			
 			//customer type logic
 			//customer type getting from user
-			if(!flage)
-			{
-				loop2:while(true)
-				{
-					System.out.print("Enter User Type(isPrime= p or Not= n):\t");
+		
+				
+				
+					System.out.print("Enter User Type(isPrime= p or isNormal= n):\t");
 					String answer = in.next().toLowerCase();
 					
 					if (answer.equals("p")) 
 					{
 						isPrime = true;
 					    System.out.println("\n\n\n\tPrime user");
-					    break loop2;
+					   
 					}
 					else if (answer.equals("n")) 
 					{
 						System.out.println("\n\n\n\tNormal User");
 						isPrime = false;
-						break loop2;
+						
 					} else 
 					{ 
 						System.out.println("\nSorry, I didn't catch that. Please answer (p/n)\n");
-						continue loop2;
+						
 					}		   
-				}
-			}	
 				
+			
+	
 			//System.out.println("Out side of while() Loop");
 				
 				//step 1
@@ -116,30 +116,8 @@ public class Main {
 					}	
 					
 				
-				//Logged out logic
-				loop3:while(true)
-				{	
-					System.out.print("\n\nYou Want to Log out(y/n):\t");
-					String answer1 = in.next().toLowerCase();
-				
-					if (answer1.equals("y")) 
-					{
-						System.out.println("\nLogged Out Successfully");
-						System.exit(0);
-				 	}
-					else if (answer1.equals("n")) 
-					{
-						flage = true;
-						continue loop1;
-					} else 
-					{ 
-						System.out.println("Sorry, I didn't catch that. Please answer y/n");
-						continue loop3;
-					}		
+					
 				}
 		}
-	}
-
-}
-
+	
 
