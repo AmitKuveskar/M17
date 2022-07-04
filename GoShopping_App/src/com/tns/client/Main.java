@@ -27,15 +27,15 @@ public class Main
 			
 			//customer type logic
 			//customer type getting from user
-		
-				System.out.print("Enter User Type(Prime= p or Normal= n):\t");
-					String answer = in.next().toLowerCase(); // converts a string to lower case letters
+			
+					System.out.print("Enter User Type(isPrime= p or Not= n):\t");
+					String answer = in.next().toLowerCase();
 					
 					if (answer.equals("p")) 
 					{
 						isPrime = true;
 					    System.out.println("\n\n\n\tPrime user");
-					   
+					    
 					}
 					else if (answer.equals("n")) 
 					{
@@ -48,9 +48,8 @@ public class Main
 						
 					}		   
 				
-			
-	
-			
+				
+				
 				
 				//step 1
 				ShopFactory gsf = new GSShopFactory();
@@ -61,13 +60,13 @@ public class Main
 					//System.out.println("In GSPrimeAcc");
 
 					//step 1
-					gsf.getNewPrimeAcc(AccNo, AccNm, 1000,deliveryCharges);
+					gsf.getNewPrimeAcc(AccNo, AccNm, 1000, isPrime);
 
 					
 					
 					//step 2
 					//GSPrimeAcc Constructor Calling & Object Creation
-					GSPrimeAcc gsp = new GSPrimeAcc();
+					GSPrimeAcc gsp = new GSPrimeAcc(AccNo, AccNm, item, isPrime);
 		
 					System.out.println("Acc no\t\t: "+gsp.getAccNo());
 					System.out.println("Acc Name\t: "+gsp.getAccNm());
@@ -77,7 +76,7 @@ public class Main
 					gsp.bookProduct(item);
 			
 					System.out.println("Charges\t\t: "+gsp.getCharges());
-					System.out.println("Delivery Charges: "+gsp.getDeliveryCharges());
+					System.out.println("Delivery Charges: "+gsp.getDeliverycharges());
 				
 					//step 5
 					//Calling toString()
@@ -116,5 +115,8 @@ public class Main
 					
 				}
 		}
+	
+
+
 	
 

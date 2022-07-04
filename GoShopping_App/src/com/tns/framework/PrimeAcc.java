@@ -1,42 +1,51 @@
 package com.tns.framework;
 
 import com.tns.framework.*;
+
 import com.tns.application.*;
 
 public class PrimeAcc extends ShopAcc
 {
 
-	protected static float deliveryCharges = 00;
+	private static final float deliveryCharges = 00;
+	protected static boolean isPrime;
 	
 	
-	
-	public PrimeAcc(int accNo, String accNm, float charges, float deliverycharges) 
+	public PrimeAcc(int accNo, String accNm, float charges, boolean isPrime) 
 	{
 		super(accNo, accNm, charges);
 		
-		this.deliveryCharges = deliveryCharges;
+		this.setPrime(isPrime);
 	}
-	public float getDeliveryCharges() 
+
+	public boolean isPrime() 
 	{
-		return deliveryCharges;
-	
+		return isPrime;
+	}
+
+	public void setPrime(boolean isPrime) 
+	{
+		this.isPrime = isPrime;
 	}
 	
+	public static float getDeliverycharges() {
+		return deliveryCharges;
+	}
+
+
+
 	@Override
 	public void bookProduct(float c) 
 	{
 		super.bookProduct(c);
 	}
-	
+
+
 	@Override
 	public String toString() {
-		return "PrimeAcc [getDeliveryCharges()=" + getDeliveryCharges() + ", getAccNo()=" + getAccNo()
-				+ ", getCharges()=" + getCharges() + ", getAccNm()=" + getAccNm() + ", toString()=" + super.toString()
+		return "PrimeAcc [isPrime=" + isPrime + ", isPrime()=" + isPrime() + ", getAccNo()=" + getAccNo()
+				+ ", getAccNm()=" + getAccNm() + ", getCharges()=" + getCharges() + ", toString()=" + super.toString()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-
-
-
-	
 	
 }

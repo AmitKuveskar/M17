@@ -5,7 +5,7 @@ import com.tns.application.*;
 
 public class NormalAcc extends ShopAcc
 {
-	protected static float deliveryCharges= 100;
+	protected static float deliveryCharges= 50;
 
 	public NormalAcc(int accNo, String accNm, float charges, float deliveryCharges) 
 	{
