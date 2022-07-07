@@ -1,6 +1,6 @@
 package com.tns.corejava;
 
-public class Multi_Thread {
+public class MultiThread {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub

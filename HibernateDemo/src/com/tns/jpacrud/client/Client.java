@@ -23,26 +23,26 @@ public class Client
 //		
 		
 	// Retrieve Operation
-	//	service.findStudentById(104);
+	//	service.findStudentById(1);
 		//System.out.println("ID is: "+student.getStudentid());
 		//System.out.println("Name is: "+student.getName());
 		
 		
 		
 		//Update Operation
-		student  =service.findStudentById(1);
-		student.setName("Amit ");
-		service.updateStudent(student);	
+//		student  =service.findStudentById(1);
+//		student.setName("Amit ");
+//		service.updateStudent(student);	
 		
-	/*	service.findStudentById(101);
-		System.out.println("ID is: "+student.getStudentid());
-		System.out.println("Name is: "+student.getName());
+//		service.findStudentById(2);
+//		System.out.println("ID is: "+student.getStudentid());
+//		System.out.println("Name is: "+student.getName());
 		
 		
 		// Delete Operation
-		student=service.findStudentById(104);
-		service.removeStudent(student);
-		System.out.println("Row removed");*/
+//		student=service.findStudentById(1);
+//		service.removeStudent(student);
+//		System.out.println("Row removed");
 		
 		
 	}

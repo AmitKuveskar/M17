@@ -1,5 +1,5 @@
 package com.tns.corejava;
-class exception_handling 
+class Exceptionhandling 
     {
         public static void main(String args[]) 
         {
