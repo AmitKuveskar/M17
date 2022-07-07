@@ -17,14 +17,14 @@ public class InheritanceTest {
 		//create one employee
 		Employee employee = new Employee();  // object : employee
 		employee.setName("Amit");
-		employee.setSalary(5000); 
+		employee.setSalary(50000); 
 		em.persist(employee);  // insert
 		System.out.println("2");
 		
 		
 		//create one manager
 		Manager manager = new Manager();
-		manager.setName("AK");
+		manager.setName("Kuveskar");
 		manager.setSalary(8000);
 		manager.setDepartmentName("Sales");
 		em.persist(manager);   // insert
@@ -32,8 +32,6 @@ public class InheritanceTest {
 		
 		System.out.println("3");
 		em.getTransaction().commit();
-		
-		System.out.println("Added one employee and manager to database.");
 		em.close();
 		factory.close();
 	}
