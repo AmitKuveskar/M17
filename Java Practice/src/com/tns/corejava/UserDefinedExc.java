@@ -1,4 +1,4 @@
-package com.tns.corejava;
+ package com.tns.corejava;
 import java.util.Scanner;
 
 public class UserDefinedExc {
@@ -18,14 +18,14 @@ public class UserDefinedExc {
 		
 		else
 		{
-			System.out.println("You can happily vote.....");
+			System.out.println("You can vote.....");
 		}
 
 	}
 
 }
 
-class CantVote extends Exception    //Checked Exception
+class CantVote extends RuntimeException    //Checked Exception
 {
 	CantVote(String msg)
 	{

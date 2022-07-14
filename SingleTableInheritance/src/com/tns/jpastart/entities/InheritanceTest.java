@@ -11,7 +11,7 @@ public class InheritanceTest {
 		EntityManagerFactory factory = Persistence.createEntityManagerFactory("JPA-PU");
 		EntityManager em = factory.createEntityManager();
 		em.getTransaction().begin();
-		System.out.println("1");
+		
 		
 		
 		//create one employee
@@ -19,8 +19,7 @@ public class InheritanceTest {
 		employee.setName("Amit");
 		employee.setSalary(50000); 
 		em.persist(employee);  // insert
-		System.out.println("2");
-		
+	
 		
 		//create one manager
 		Manager manager = new Manager();
@@ -30,7 +29,6 @@ public class InheritanceTest {
 		em.persist(manager);   // insert
 		
 		
-		System.out.println("3");
 		em.getTransaction().commit();
 		em.close();
 		factory.close();

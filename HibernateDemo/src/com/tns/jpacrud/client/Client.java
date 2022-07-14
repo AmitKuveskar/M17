@@ -30,9 +30,9 @@ public class Client
 		
 		
 		//Update Operation
-//		student  =service.findStudentById(1);
-//		student.setName("Amit ");
-//		service.updateStudent(student);	
+		student  =service.findStudentById(1);
+		student.setName("Amit ");
+		service.updateStudent(student);	
 		
 //		service.findStudentById(2);
 //		System.out.println("ID is: "+student.getStudentid());
