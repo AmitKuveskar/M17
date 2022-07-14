@@ -1,4 +1,4 @@
-package mypack;
+package com.tns.task;
 
 public class Class_A {
 
